@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST["name"]) && isset($_POST["description"]) && isset($_POST["created_at"])) {
-$pdo = new PDO ("pgsql:host=127.0.0.1; dbname=CRUD", "_", "_");
+$pdo = new PDO ("pgsql:host=127.0.0.1; dbname=CRUD", "root", "root");
 $sql = "INSERT INTO article (name, discription, created_at) VALUES ( :name, :description, :created_at)";
 
 $pdo_statement = $pdo->prepare($sql);
