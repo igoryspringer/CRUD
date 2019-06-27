@@ -1,9 +1,11 @@
     <?php
-$pdo = new PDO ("pgsql:host=127.0.0.1; dbname=CRUD", "postgres", "gfnhbjn");
+$pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
 //$sql = "SELECT * FROM arcticl";
-$pdo_statement = $pdo->prepare("SELECT * FROM Article");
+$pdo_statement = $pdo->prepare("SELECT * FROM article");
 $pdo_statement->execute();
 $result = $pdo_statement->fetchALL();
+$pdo_statement->fetchALL(); //var_dump($result);
+
 ?>
 
 <head>
@@ -15,7 +17,7 @@ $result = $pdo_statement->fetchALL();
 
     <Table border="1" >
     <!-- Заголовок таблицы -->
-        <caption style=" front-size:xx=large"> Arcticle </caption>
+        <caption style=" front-size:xx=large"> arcticle </caption>
 
         <!-- Шапка таблицы -->
         <tr style="font-weight: bold" >
@@ -27,7 +29,7 @@ $result = $pdo_statement->fetchALL();
 
             <tr>
                 <td> <?php echo $item['name']; ?> </td>
-                <td> <?php echo $item['desciption']; ?> </td>
+                <td> <?php echo $item['description']; ?> </td>
                 <td> <?php echo $item['created_at']; ?> </td>
 
             <td>
