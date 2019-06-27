@@ -1,10 +1,10 @@
     <?php
 $pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
-//$sql = "SELECT * FROM arcticl";
+
 $pdo_statement = $pdo->prepare("SELECT * FROM article");
 $pdo_statement->execute();
 $result = $pdo_statement->fetchALL();
-$pdo_statement->fetchALL(); //var_dump($result);
+$pdo_statement->fetchALL();
 
 ?>
 

@@ -1,9 +1,9 @@
 <?php
-// Метод Create
+
 if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Created_at'])) {
-    // Условие когда форма вызывает сама себя
+
     if ($_POST['Name'] && $_POST['Description'] && $_POST['Created_at']) {
-        //Проверям чтобы все значения были заполнены
+
         $Connect2DB = new PDO("pgsql:host=localhost; dbname=postgres", "postgres", 'gfnhbjn', array(\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         $Create2DB = $Connect2DB -> prepare ( "INSERT INTO Article (name, description, created_at) VALUES (:name, :description, :created_at )");
         $Create2DB -> bindParam(':name', $_POST['Name']);
@@ -12,7 +12,7 @@ if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Creat
         $Result = $Create2DB -> execute( );
     }
     header ( "Location: create.php");
-    exit ( );  //Возвращаем в таблицу Index
+    exit ( );
 }
 ?>
 
