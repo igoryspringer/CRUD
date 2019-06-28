@@ -16,10 +16,8 @@ if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Creat
 }
 ?>
 
-<html>
-<!-- Форма добавления данных -->
 <head>
-    <title> Create to Article </title>
+    <title> Данные </title>
 </head>
 
 <body>
@@ -44,4 +42,3 @@ if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Creat
 
 </form>
 </body>
-</html>
