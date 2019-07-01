@@ -31,8 +31,8 @@ $pdo_statement->fetchALL();
                 <td> <?php echo $item['created_at']; ?> </td>
 
             <td>
-                <a href="update.php?id<?php echo $item['id'];?>"> Изменить</a>
-                <a href="delete.php?id<?php echo $item['id'];?>"> Удалить</a>
+                <a href="update.php?id=<?php echo $item['id'];?>"> Изменить</a>
+                <a href="delete.php?id=<?php echo $item['id'];?>"> Удалить</a>
             </td>
             </tr>
 
