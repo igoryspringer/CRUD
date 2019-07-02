@@ -1,5 +1,5 @@
 <?php
-Class Article
+class Article
 {
     private function Connect2DB ()
     {
