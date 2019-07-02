@@ -1,4 +1,5 @@
     <?php
+
 $pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
 $pdo_statement = $pdo->prepare("SELECT * FROM article");
 $pdo_statement->execute();
