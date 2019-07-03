@@ -1,6 +1,9 @@
-    <?php
+<?php
 
-$pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
+include ('controller/MainController.php');
+echo (new MainController())->read();
+
+/* $pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
 $pdo_statement = $pdo->prepare("SELECT * FROM article");
 $pdo_statement->execute();
 $Result = $pdo_statement->fetchALL();

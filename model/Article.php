@@ -10,13 +10,13 @@ class Article
     public function DeleteFromArticle ($id)
     {
         $DeleteFromDB = ($this->Connect2DB())->prepare("DELETE FROM article WHERE id=:id;");
-        $DeleteFromDB->bindParam(':id', id);
+        $DeleteFromDB->bindParam(':id', $id);
         return $DeleteFromDB->execute();
     }
 
     public function ReadArticle ()
     {
-        $ReadAll = ($this->Connect2DB())->prepare("SELEST * FROM article");
+        $ReadAll = ($this->Connect2DB())->prepare("SELEST * FROM Article");
         $ReadAll->execute();
         return $ReadAll->fetchAll();
     }

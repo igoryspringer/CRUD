@@ -1,6 +1,9 @@
 <?php
 
-if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Created_at'])) {
+include ('controller/MainController.php');
+echo (new MainController())->create();
+
+/*if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Created_at'])) {
 
     if ($_POST['Name'] && $_POST['Description'] && $_POST['Created_at']) {
 
