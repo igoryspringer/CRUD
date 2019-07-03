@@ -11,7 +11,7 @@ if (isset($_POST['Name']) && isset($_POST['Description']) && isset($_POST['Creat
         $Create2DB -> bindParam(':created_at', $_POST['Created_at']);
         $Result = $Create2DB -> execute( );
     }
-    header ( "Location: create.php");
+    header ( "Location: createCtrl.php");
     exit ( );
 }
 ?>
