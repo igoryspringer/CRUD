@@ -21,7 +21,7 @@ if (isset($_POST['id'])) {
         $Update2DB -> bindParam(':id', $_POST['id']);
         $Result = $Update2DB -> execute();
     }
-    header ("location: readCtrl.php");
+    header ("location: read.php");
     exit ( );
 }
 ?>

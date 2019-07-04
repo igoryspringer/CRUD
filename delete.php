@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $DeleteFromDB -> bindParam(':id', $_GET['id']);
     $Result = $DeleteFromDB -> execute();
 
-    header ("Location: readCtrl.php");
+    header ("Location: read.php");
     exit();
 }
 ?>
