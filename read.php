@@ -1,5 +1,4 @@
 <?php
-
 $pdo = new PDO ("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn");
 $pdo_statement = $pdo->prepare("SELECT * FROM article");
 $pdo_statement->execute();
@@ -31,16 +30,16 @@ $pdo_statement->fetchALL();
                 <td> <?php echo $item['description']; ?> </td>
                 <td> <?php echo $item['created_at']; ?> </td>
 
-            <td>
-                <a href="update.php?id=<?php echo $item['id'];?>"> Изменить</a>
-                <a href="delete.php?id=<?php echo $item['id'];?>"> Удалить</a>
-            </td>
+                <td>
+                    <a href="update.php?id=<?php echo $item['id'];?>"> Изменить</a>
+                    <a href="delete.php?id=<?php echo $item['id'];?>"> Удалить</a>
+                </td>
             </tr>
 
-     <?php } ?>
+        <?php } ?>
     </Table>
 
     <br>
-    <button name="create" formacrion="create.php" formethod="post"> </button>
+    <button name="create" formaction="create.php" formmethod="post"> </button>
 </form>
 </body>

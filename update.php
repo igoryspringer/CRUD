@@ -1,16 +1,13 @@
 <?php
-
 if (isset ($_GET['id'])) {
     $Connect2DB = new PDO("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn", array(\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     $ReadFromDB = $Connect2DB->prepare("SELECT * FROM article WHERE id=:IDENTITY ");
     $ReadFromDB->bindParam(":IDENTITY", $_GET['id']);
     $ReadFromDB->execute();
     $Result = $ReadFromDB->fetchAll();
-
     foreach ($Result as $item);
     $title = $item['name'];
 }
-
 if (isset($_POST['id'])) {
     if ($_POST['name'] && $_POST['description'] && $_POST['created_at']) {
         $Connect2DB = new PDO("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn", array(\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
