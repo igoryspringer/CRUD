@@ -1,6 +1,5 @@
-<html>
 <head>
-    <title> Table </title>
+    <title> Таблица </title>
 </head>
 <body>
 
@@ -8,10 +7,11 @@
 
     <Table border="1" >
 
-        <caption style=" front-size:xx=large"> Article </caption>
+        <caption style=" front-size:xx=large"> ARTICLE </caption>
+
 
         <tr style="font-weight: bold" >
-            <td>Name</td><td>Description</td><td>Created_at</td> <td></td>
+            <td>Имя</td><td>Описание</td><td>Дата создания</td> <td></td>
         </tr>
 
         <?php
@@ -23,8 +23,8 @@
                 <td> <?php echo $item['created_at']; ?> </td>
 
                 <td>
-                    <a href="/../controller/updateCtrl.php?id=<?php echo $item['id'];?>"> Update </a>
-                    <a href="/../controller/deleteCtrl.php?id=<?php echo $item['id'];?>"> Delete </a>
+                    <a href="/../controller/updateCtrl.php?id=<?php echo $item['id'];?>"> Изменить</a>
+                    <a href="/../controller/deleteCtrl.php?id=<?php echo $item['id'];?>"> Удалить</a>
                 </td>
             </tr>
 
@@ -35,4 +35,3 @@
     <button name="create" formaction="/../controller/createCtrl.php" formmethod="post"> </button>
 </form>
 </body>
-</html>

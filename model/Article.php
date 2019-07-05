@@ -26,8 +26,9 @@ class Article
     {
         $Create = ($this->Connect2DB())->prepare("INSERT INTO article (name, description, created_at) VALUES (:name, :description, :created_at)");
         $Create->bindParam(':name', $name);
-        $Create->bindParam(':descriprion', $description);
+        $Create->bindParam(':description', $description);
         $Create->bindParam(':created_at', $created_at);
+        //var_dump($ReadAll->errorInfo()); exit();
         return $Create->execute();
     }
 

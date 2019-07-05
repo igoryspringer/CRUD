@@ -8,7 +8,7 @@ if (isset ($_GET['id'])) {
     foreach ($Result as $item);
     $title = $item['name'];
 }
-if (isset($_POST['id'])) {
+if (isset ($_POST['id'])) {
     if ($_POST['name'] && $_POST['description'] && $_POST['created_at']) {
         $Connect2DB = new PDO("pgsql:host=localhost; dbname=postgres", "postgres", "gfnhbjn", array(\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         $Update2DB = $Connect2DB -> prepare("UPDATE article SET name = :name, description = :description, created_at = :created_at WHERE id = :id");
